@@ -1,0 +1,41 @@
+<ng-template #rt let-r="result" let-t="term">
+  <!--<img [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/' + r['flag']" class="me-1" style="width: 16px">-->
+  <!--<ul>
+    <li>
+      <ngb-highlight [result]="r.clave" [term]="t"></ngb-highlight>
+    </li>
+    <li>
+      <ngb-highlight [result]="r.nombre" [term]="t"></ngb-highlight>
+    </li>
+  </ul>-->
+
+  <!--<a class='autocomplete'>
+    <ngb-highlight [result]="r.clave" [term]="t"></ngb-highlight>-->
+    <!--<span ng-if='match.model.estaActiva == false' class='pull-right'><i class='mdi mdi-lock red'></i></span>-->
+    <!--<br />-->
+    <!--<i><span ng-bind-html='match.model.clave | uibTypeaheadHighlight: query'></span></i>
+    <span class='pull-right' ng-bind-html='match.model.fechaInicio | date: \"dd/MM/yyyy\"'></span>
+    <span ng-if='match.model.familiaId' class='pull-right' ng-bind-html='match.model.cuenta'></span>-->
+    <!--<ngb-highlight [result]="r.nombre" [term]="t"></ngb-highlight>
+  </a>-->
+
+  <div class="list-group">
+    <div class="list-group-item list-group-item-action" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><ngb-highlight [result]="r.clave" [term]="t"></ngb-highlight></h5>
+        <small>3 days ago</small>
+      </div>
+      <p class="mb-1"><ngb-highlight [result]="r.nombre" [term]="t"></ngb-highlight></p>
+      <small>And some small print.</small>
+    </div>
+  </div>
+
+</ng-template>
+
+
+<!--<input id="typeahead-basic" type="text" class="form-control form-control-sm" [(ngModel)]="model" [ngbTypeahead]="search"  />-->
+<!--<p>Works</p>-->
+<div class="input-group">
+  <div class="input-group-text"></div>
+  <input id="typeahead-template" type="text" class="form-control form-control-sm" [(ngModel)]="model" [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter" />
+</div>
