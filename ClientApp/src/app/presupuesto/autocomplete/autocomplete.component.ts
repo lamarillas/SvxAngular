@@ -19,7 +19,7 @@ const statesWithFlags: { id: number, clave: string, nombre: string }[] = [
   templateUrl: './autocomplete.component.html',
   styleUrls: ['./autocomplete.component.css']
 })
-export class AutocompleteComponent implements OnInit {
+export class AutocompleteComponent  {
 
   public model: any;
 
@@ -34,9 +34,4 @@ export class AutocompleteComponent implements OnInit {
   formatter = (x: { name: string }) => x.name;
 
   //constructor() { }
-
-  ngOnInit() {
-
-  }
-
 }

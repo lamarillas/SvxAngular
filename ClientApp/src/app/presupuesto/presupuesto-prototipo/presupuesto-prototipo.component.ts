@@ -1,7 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
-
-
 @Component({
   selector: 'app-presupuesto-prototipo',
   templateUrl: './presupuesto-prototipo.component.html',
@@ -13,7 +11,5 @@ export class PresupuestoPrototipoComponent {
   @ViewChild('flex') flex: WjFlexGrid | undefined;
 
   //constructor() { }
-
-
 
 }
