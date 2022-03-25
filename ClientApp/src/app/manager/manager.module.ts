@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { ManagerRoutingModule } from './manager-routing.module';
 
 // 2. Remove routes array
@@ -7,10 +8,11 @@ import { ManagerRoutingModule } from './manager-routing.module';
 //]
 
 @NgModule({
-  declarations: [ ],
+  declarations: [],
   imports: [
     // 3. Add back ManagerRoutingModule
-    ManagerRoutingModule
+    ManagerRoutingModule,
+    
   ]
 })
 

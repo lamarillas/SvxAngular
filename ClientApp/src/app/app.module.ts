@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.modules';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

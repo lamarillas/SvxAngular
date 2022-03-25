@@ -1,4 +1,7 @@
+import { ComponentFactoryResolver } from '@angular/core';
+import { ViewContainerRef } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { ManagerComponent } from '../manager.component';
 
 @Component({
   selector: 'app-manager-home',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private viewContainerRef: ViewContainerRef,
+    private cfr: ComponentFactoryResolver
+  ) { }
 
   ngOnInit(): void {
+    const componentFactory = this.cfr.resolveComponentFactory(ManagerComponent);
+    this.viewContainerRef.createComponent(componentFactory);
   }
 
 }
