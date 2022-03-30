@@ -16,6 +16,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   ],
   template: `
+      <p>manager component</p>
     `
 })
 export class ManagerComponent implements OnInit {
